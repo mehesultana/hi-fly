@@ -17,6 +17,13 @@ export const Header = () => {
 			key: 'selection',
 		},
 	]);
+
+	const [openOptions, setOpenOptions] = useState(false);
+	const [options, setOptions] = useState({
+		adult: 1,
+		children: 0,
+		room: 1,
+	});
 	return (
 		<div className="header">
 			<div className="headerContainer">
@@ -59,7 +66,7 @@ export const Header = () => {
 
 					<div className="headerSearchItem">
 						<FontAwesomeIcon icon={faBed} className="headerIcon" />
-						<span className="headerSearchText">2 adults 2 children 1 room</span>
+						<span className="headerSearchText">{`${options.adult} adult . ${options.children} children . ${options.room} room`}</span>
 					</div>
 					<div className="headerSearchItem">
 						<button className="headerBtn">Search</button>
