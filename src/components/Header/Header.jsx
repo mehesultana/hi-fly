@@ -74,7 +74,7 @@ export const Header = ({ type }) => {
 
 							<div className="headerSearchItem">
 								<FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-								<span onClick={() => setOpenDate(!openDate)} className="headerSearchText">{`${format(date[0].startDate, 'MM/dd/yyyy')}to ${format(date[0].endDate, 'MM/dd/yyyy')}`}</span>
+								<span onClick={() => setOpenDate(!openDate)} className="headerSearchText">{`${format(date[0].startDate, 'MM/dd/yyyy')} to ${format(date[0].endDate, 'MM/dd/yyyy')}`}</span>
 								{openDate && <DateRange editableDateInputs={true} onChange={(item) => setDate([item.selection])} moveRangeOnFirstSelection={false} ranges={date} className="date" />}
 							</div>
 
